@@ -1,0 +1,34 @@
+{
+  "author": {
+    "name": "chenqiang"
+  },
+  "dependencies": {},
+  "description": "est loader module for webpack",
+  "devDependencies": {
+    "less-plugin-autoprefix": "^1.5.1",
+    "less-plugin-est": "^2.0.4"
+  },
+  "files": [
+    "index.js"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "chenqiang",
+      "email": "chenqiang03@baidu.com"
+    }
+  ],
+  "name": "est-loader",
+  "optionalDependencies": {},
+  "publish_time": 1452074641959,
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chenqiangmingyu/est-loader.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.0.0"
+}

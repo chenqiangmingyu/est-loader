@@ -1,2 +1,7 @@
-# est-loader
-a simple est-loader for webpack
+# est loader for webpack
+
+## Usage
+
+``` js
+var url = require("est!./index.less");
+```

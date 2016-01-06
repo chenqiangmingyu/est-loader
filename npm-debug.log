@@ -1,0 +1,68 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'D:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'D:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'owner',
+1 verbose cli   'add',
+1 verbose cli   'chenqiang',
+1 verbose cli   'est-loader' ]
+2 info using npm@3.5.2
+3 info using node@v0.10.33
+4 verbose owner add chenqiang to est-loader
+5 silly mapToRegistry name -/user/org.couchdb.user:chenqiang
+6 silly mapToRegistry using default registry
+7 silly mapToRegistry registry https://registry.npm.taobao.org/
+8 silly mapToRegistry uri https://registry.npm.taobao.org/-/user/org.couchdb.user:chenqiang
+9 verbose request uri https://registry.npm.taobao.org/-/user/org.couchdb.user:chenqiang
+10 verbose request new user, so can't send auth
+11 info attempt registry request try #1 at 18:12:00
+12 verbose request id 1a8ab40df2a78a41
+13 http request GET https://registry.npm.taobao.org/-/user/org.couchdb.user:chenqiang
+14 http 200 https://registry.npm.taobao.org/-/user/org.couchdb.user:chenqiang
+15 verbose headers { date: 'Wed, 06 Jan 2016 10:12:00 GMT',
+15 verbose headers   'content-type': 'application/json; charset=utf-8',
+15 verbose headers   'content-length': '330',
+15 verbose headers   connection: 'keep-alive',
+15 verbose headers   etag: '"14a-gsX3cOcHp3mRfWJr2JLwfQ"',
+15 verbose headers   'x-readtime': '6' }
+16 silly get cb [ 200,
+16 silly get   { date: 'Wed, 06 Jan 2016 10:12:00 GMT',
+16 silly get     'content-type': 'application/json; charset=utf-8',
+16 silly get     'content-length': '330',
+16 silly get     connection: 'keep-alive',
+16 silly get     etag: '"14a-gsX3cOcHp3mRfWJr2JLwfQ"',
+16 silly get     'x-readtime': '6' } ]
+17 verbose get saving chenqiang to C:\Users\chenqiang03\AppData\Roaming\npm-cache\registry.npm.taobao.org\-\user\org.couchdb.user_3Achenqiang\.cache.json
+18 silly mapToRegistry name est-loader
+19 silly mapToRegistry using default registry
+20 silly mapToRegistry registry https://registry.npm.taobao.org/
+21 silly mapToRegistry uri https://registry.npm.taobao.org/est-loader
+22 verbose request uri https://registry.npm.taobao.org/est-loader
+23 verbose request no auth needed
+24 info attempt registry request try #1 at 18:12:00
+25 http request GET https://registry.npm.taobao.org/est-loader
+26 info retry will retry, error on last attempt: Error: read ECONNRESET
+27 info attempt registry request try #2 at 18:12:31
+28 http request GET https://registry.npm.taobao.org/est-loader
+29 info retry will retry, error on last attempt: Error: read ECONNRESET
+30 info attempt registry request try #3 at 18:13:51
+31 http request GET https://registry.npm.taobao.org/est-loader
+32 error owner mutate Error getting package data for est-loader
+33 verbose stack Error: read ECONNRESET
+33 verbose stack     at errnoException (net.js:904:11)
+33 verbose stack     at TCP.onread (net.js:558:19)
+34 verbose cwd E:\web\React-demo\node_modules\est-loader
+35 error Windows_NT 6.1.7601
+36 error argv "D:\\Program Files\\nodejs\\\\node.exe" "D:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "owner" "add" "chenqiang" "est-loader"
+37 error node v0.10.33
+38 error npm  v3.5.2
+39 error code ECONNRESET
+40 error errno ECONNRESET
+41 error syscall read
+42 error network read ECONNRESET
+43 error network This is most likely not a problem with npm itself
+43 error network and is related to network connectivity.
+43 error network In most cases you are behind a proxy or have bad network settings.
+43 error network
+43 error network If you are behind a proxy, please make sure that the
+43 error network 'proxy' config is set properly.  See: 'npm help config'
+44 verbose exit [ 1, true ]
