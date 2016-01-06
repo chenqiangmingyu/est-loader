@@ -4,6 +4,8 @@ var fs = require('fs');
 var loaderUtils = require('loader-utils');
 var path = require('path');
 
+var _stringify = require('./stringify.loader');
+
 var less = require('less');
 var Est = require('less-plugin-est');
 var LessPluginAutoPrefix = require('less-plugin-autoprefix');
@@ -123,7 +125,7 @@ function getWebpackFileManager(less, loaderContext, query, isSync) {
         var moduleRequest = loaderUtils.urlToRequest(filename, query.root);
 
         if (filename === 'all.less') {
-            moduleRequest = require.resolve('./node_modules/less-plugin-est/src/all.less');
+            moduleRequest = require.resolve('../less-plugin-est/src/all.less');
         }
 
         // Less is giving us trailing slashes, but the context should have no trailing slash
