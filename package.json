@@ -2,11 +2,12 @@
   "author": {
     "name": "chenqiang"
   },
-  "dependencies": {},
-  "description": "est loader module for webpack",
-  "devDependencies": {
+  "dependencies": {
     "less-plugin-autoprefix": "^1.5.1",
     "less-plugin-est": "^2.0.4"
+  },
+  "description": "est loader module for webpack",
+  "devDependencies": {
   },
   "files": [
     "index.js"
@@ -25,10 +26,10 @@
   "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chenqiangmingyu/est-loader.git"
+    "url": "https://github.com/chenqiangmingyu/est-loader.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "0.0.0"
+  "version": "0.0.1"
 }
