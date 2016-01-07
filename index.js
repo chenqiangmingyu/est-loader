@@ -4,8 +4,6 @@ var fs = require('fs');
 var loaderUtils = require('loader-utils');
 var path = require('path');
 
-var _stringify = require('./stringify.loader');
-
 var less = require('less');
 var Est = require('less-plugin-est');
 var LessPluginAutoPrefix = require('less-plugin-autoprefix');
@@ -125,7 +123,29 @@ function getWebpackFileManager(less, loaderContext, query, isSync) {
         var moduleRequest = loaderUtils.urlToRequest(filename, query.root);
 
         if (filename === 'all.less') {
-            moduleRequest = require.resolve('../less-plugin-est/src/all.less');
+            var hash = {};
+            var estPluginPath = 'less-plugin-est/src/all.less';
+            try {
+                var targetPaths = [];
+                module.children.forEach(function (child) {
+                    [].push.apply(targetPaths, child.paths);
+                });
+
+                targetPaths.some(function (targetPath) {
+                    if (!hash[targetPath]) {
+                        hash[targetPath] = true;
+
+                        targetPath = path.join(targetPath, estPluginPath);
+                        if (fs.existsSync(targetPath)) {
+                            moduleRequest = targetPath;
+
+                            return true;
+                        }
+                    }
+                });
+            } catch (ex) {
+                console.log(ex);
+            }
         }
 
         // Less is giving us trailing slashes, but the context should have no trailing slash
@@ -151,18 +171,6 @@ function getWebpackFileManager(less, loaderContext, query, isSync) {
                 });
             });
         });
-    };
-
-    WebpackFileManager.prototype.getEstLessRequest = function (plugin) {
-        var children = module.children;
-        children.forEach(function (child) {
-            console.log(child.id.indexOf('less-plugin-est'));
-            if (child.id.indexOf('less-plugin-est') > -1) {
-                console.log(path.join(child.id, '../../src/all.less'));
-            }
-        });
-
-        return './node_modules/less-plugin-est/src/all.less';
     };
 
     WebpackFileManager.prototype.loadFileSync = function(filename, currentDirectory, options, environment) {
