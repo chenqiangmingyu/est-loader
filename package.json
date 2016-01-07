@@ -3,10 +3,16 @@
     "name": "chenqiang"
   },
   "dependencies": {
+    "less": "^2.5.3",
     "less-plugin-autoprefix": "^1.5.1",
-    "less-plugin-est": "^2.0.4"
+    "less-plugin-est": "^2.0.4",
+    "loader-utils": "^0.2.12"
   },
-  "keywords": ["esl", "esl-loader", "webpack"],
+  "keywords": [
+    "esl",
+    "esl-loader",
+    "webpack"
+  ],
   "description": "est loader module for webpack",
   "devDependencies": {},
   "files": [
@@ -29,5 +35,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "0.0.7"
+  "version": "0.0.8"
 }
