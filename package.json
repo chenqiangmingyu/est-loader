@@ -21,8 +21,7 @@
     }
   ],
   "name": "est-loader",
-  "optionalDependencies": {},
-  "readme": "ERROR: No README data found!",
+  "files": ["stringify.loader.js"],
   "repository": {
     "type": "git",
     "url": "https://github.com/chenqiangmingyu/est-loader.git"
@@ -30,5 +29,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "0.0.5"
+  "version": "0.0.6"
 }
