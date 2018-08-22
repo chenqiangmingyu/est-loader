@@ -48,7 +48,7 @@ module.exports = function(source) {
     config.plugins.push(webpackPlugin);
 
     // If present, add custom LESS plugins.
-    if (this.options[configKey]) {
+    if (this.options && this.options[configKey]) {
         config.plugins = config.plugins.concat(this.options[configKey].lessPlugins || []);
     }
 
